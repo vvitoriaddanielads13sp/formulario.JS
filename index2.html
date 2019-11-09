@@ -1,0 +1,147 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Form with java</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+	<form>
+		<div class="form-group">
+
+			
+	<div class="col-md-2 offset-md-5">
+		<h3>Dados
+		pessoais</h3>
+	</div>
+	<div class="row container1">
+		<div class="col-md-4 dados">	
+				<tr>
+					Nome do Aluno<td>:<input type="text" id="Aluno"><br>
+					Data de Nascimento: <input type="date" id="nasc"><br>
+					Nome Genitora:<input type="text" id="mae"><br>
+					Nome Genitor: <input type="text" id="pai"><br>	
+					(DDD) Tel .:<br><input type="text" id="ddd" placeholder="DDD" size="5px"> <input type="text" id="num" size="10px"><br>	
+					E-mail:<br> <input type="email" id="email"><br><br>
+				</tr>
+		</div>		
+		
+
+		<div class="col-md-2 entradas">	
+		</div>	
+	</div>
+	</div>
+
+
+		
+	<!--termina o primeiro fieldset-->	
+		
+		
+			<br>
+			<div class="col-md-2 offset-md-5">
+				<h3 style="text-align: center;">Informações de Matrícula:</h3>
+			</div>
+			
+
+	<center>
+		<div class="row container2 ">
+			<div class="col-md-3 hey"  style="text-align: left;">			
+					<tr>
+						<b>Turno: </b> <br>
+						<td><input type="radio" name="checkbox" value="Manhã">Manhã</td><br>
+						<td><input type="radio" name="checkbox" value="Tarde">Tarde</td>
+					</tr>
+		
+						<br><br>
+						<b>Série</b>
+						<br>
+
+						
+						<select id="select">
+							<td>
+								<option value=""> selecione</option>
+								<option value="Pré-Escola">Pré-Escola</option>
+								<option value="Fundamental">Ensino Fundamental</option>
+								<option value="Médio">Ensino Médio</option>
+								<option value="Técnico">Ensino Técnico</option>
+							</td>
+						</select>
+					
+			</div>
+
+		<div class="col-md-3 yoy" style="text-align: left;">
+				
+					<b>Atividades Extracurriculares</b><br>
+				<tr>
+					<td><input type="checkbox" value="Informática" id="info" name="ceck">Informática</td><br>
+					<td><input type="checkbox" value="Música" id="musc" name="ceck">Música</td><br>
+					<td><input type="checkbox" value="Balet" id="bal" name="ceck">Balet</td><br>
+					<td><input type="checkbox" value="Pintura" id="pint" name="ceck">Pintura</td><br>
+					<td><input type="checkbox" value="Judô" id="jud" name="ceck">Judô</td><br>
+					<td><input type="checkbox" value="Futebol" id="fut" name="ceck">Futebol</td><br>
+				</tr>
+		</div>
+
+	</div>
+	</center>
+		
+			
+		<center>
+			<br>
+			<input type="reset" value="reset">
+			<input type="button" onclick="resultado()" value="Enviar" >
+		</center>
+
+
+		<script type="text/javascript">
+
+		window.alert('Confira o resultado em "INSPECIONAR A PÁGINA"');
+
+			function resultado()
+			{
+				//primeira inserção de dados: nome, genitores, contato..
+				var name=document.getElementById('Aluno');
+				console.log('NOME: '+name.value);
+	
+				var data=document.getElementById('nasc');
+				console.log('DATA NASC.: '+data.value);
+
+				var mmae=document.getElementById('mae');
+				console.log('MÃE: '+mmae.value);
+
+				var paai=document.getElementById('pai');
+				console.log('PAI: '+paai.value);
+
+				var number=document.getElementById	('num');
+				var dDD=document.getElementById('ddd');
+				console.log('TEL.: ('+dDD.value+')'+number.value);
+
+				var emaiL=document.getElementById('email');
+				console.log('Email: '+emaiL.value);
+
+				var selector=document.getElementById('select')
+				console.log('Opção: '+selector.value);
+
+				//checando opção de período (tarde/manhã)
+			 	var radio = document.getElementsByName("checkbox");
+			    for(var i = 0; i < radio.length; i++)
+			    {
+			      if(radio[i].checked)
+			        {console.log('Período: '+radio[i].value);}
+			    }
+
+			    //checando opção de atividades extras
+			 	var checkbox = document.getElementsByName("ceck");
+			    for(var i = 0; i < checkbox.length; i++)
+			    {
+			      if(checkbox[i].checked)
+			        {console.log('Atividade Extra: \n'+checkbox[i].value);}
+			    }
+		}
+		</script>
+	</form>
+	</body>
+	</html>
+		
+

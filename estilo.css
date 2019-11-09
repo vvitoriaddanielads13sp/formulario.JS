@@ -1,0 +1,23 @@
+.container1, .container2
+{
+	margin-top:5%;
+	margin-right:15%;
+	margin-left: 50%;
+	text-orientation: center;
+	float:center;
+	padding-left: 35%;
+
+}
+
+.dados, .hey
+{
+		border-left: 2px solid black;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black; 
+}
+.entradas, .yoy
+{
+		border-right: 2px solid black;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black; 
+}
